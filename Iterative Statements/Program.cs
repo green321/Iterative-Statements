@@ -32,25 +32,28 @@ namespace Iterative_Statements
                 //IF/ELSE IF/ELSE
                 if((Value_of_Input>0)&&(Value_of_Input<101))
                 {
-                    Console.WriteLine("Excuting for a loop!");
-                    Console.WriteLine("The For Loop will iterate " + Value_of_Input.ToString() + " times.");
-
                     //For Loop
-                    for (int i = 0; i < Value_of_Input; i++) 
+                    for (int i = 1; i < Value_of_Input; i++)
                     {
-                        Console.WriteLine("The value of the variable i in this iteration is : " + i.ToString());
+                        for (int a = 0; a < Value_of_Input; Value_of_Input--, i++)
+                        {
+                            
+                            Console.WriteLine("You have entered " + Value_of_Input.ToString() + "." + "This is the current integer value in the loop: " + i.ToString());
+                        }
                     }
 
                     Console.WriteLine("Press any key to exit the program...");
                     Console.ReadKey(true);
-                }
-                else
+                }  
+            
+                    else
                 {
                     Console.WriteLine("Please enter the integer value between 1 and 100.");
                     Console.WriteLine("Please try again later.");
                     Console.WriteLine("Please exit the program and try again...");
                     Console.ReadKey(true);
                 }
+            
             }//End of try
 
             catch
